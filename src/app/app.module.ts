@@ -4,18 +4,21 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './header/header.component';
 
 import { AppComponent } from './app.component';
+import {StartPageComponent} from './start-page/start-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    StartPageComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot()
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    StartPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
