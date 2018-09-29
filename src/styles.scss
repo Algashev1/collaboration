@@ -39,3 +39,35 @@
 .color-star {
   color: #4285f4;
 }
+
+.event-block {
+  height: 450px;
+  border-radius: 40px;
+  background-color: rgba(87, 134, 255, 0.1);
+}
+
+.event-info-block {
+  padding-top: 100px;
+  padding-left: 100px;
+  height: 400px;
+}
+
+.event-info-photo-comment {
+  //height: 50px;
+  //width: 50px;
+}
+
+.comment {
+  padding-right: 20%;
+
+}
+
+.custom-p {
+  text-align: justify;
+}
+
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+
+}
