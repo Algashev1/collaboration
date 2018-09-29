@@ -1,12 +1,22 @@
 <div class="modal-header">
-  <h4 class="modal-title">Hi there!</h4>
+  <h4 class="modal-title">Авторизация</h4>
   <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body">
-  <p>Авторизация</p>
+  <div class="md-form">
+    <i class="fa fa-envelope prefix"></i>
+    <input mdbInputDirective type="text" id="email" class="form-control">
+    <label for="email">Email</label>
+  </div>
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>
+    <input mdbInputDirective data-error="wrong password" data-success="valid password" minLength="10"
+           maxLength="25" type="password" class="form-control" id="form10" name="password">
+    <label for="form10">Пароль</label>
+  </div>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  <a mdbBtn color="primary" size="lg" class="waves-light" (click)="activeModal.close('Close click')" mdbWavesEffect>Зарегистрироваться</a>
 </div>
