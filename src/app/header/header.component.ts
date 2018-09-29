@@ -6,7 +6,7 @@ import {RegModalContent} from './reg/reg.component';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
 })
 
 export class HeaderComponent implements OnInit {
