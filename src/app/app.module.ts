@@ -5,11 +5,13 @@ import { HeaderComponent } from './header/header.component';
 
 import { AppComponent } from './app.component';
 import {StartPageComponent} from './start-page/start-page.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     StartPageComponent
   ],
   imports: [
@@ -18,6 +20,7 @@ import {StartPageComponent} from './start-page/start-page.component';
   ],
   exports: [
     HeaderComponent,
+    FooterComponent,
     StartPageComponent
   ],
   providers: [],
