@@ -1,5 +1,5 @@
 <header class="h-100">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar top-nav-collapse">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar top-nav-collapse white">
     <div class="container">
       <button
         class="navbar-toggler"
@@ -16,15 +16,15 @@
       <div class="collapse navbar-collapse" id="basicExampleNav">
         <ul class="navbar-nav mr-auto smooth-scroll">
           <li class="nav-item">
-            <a class="nav-link waves-effect waves-light" routerLink="start-page">События</a>
+            <a class="nav-link waves-effect waves-light dark-grey-text" routerLink="start-page">События</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect waves-light" routerLink="places">Места</a>
+            <a class="nav-link waves-effect waves-light dark-grey-text" routerLink="places">Места</a>
           </li>
         </ul>
       </div>
-      <button mdbBtn type="button" color="primary" rounded="true" class="waves-light" mdbWavesEffect (click)="reg()">Зарегистрироваться</button>
-      <button mdbBtn type="button" color="primary" rounded="true" class="waves-light" mdbWavesEffect (click)="auth() ">Авторизоваться</button>
+      <button mdbBtn type="button" rounded="true" class="btn-link waves-effect waves-dark" mdbWavesEffect (click)="auth()">Зарегистрироваться</button>
+      <button mdbBtn type="button" rounded="true" class="btn-link waves-effect waves-light" mdbWavesEffect (click)="reg() ">Авторизоваться</button>
     </div>
   </nav>
 </header>
