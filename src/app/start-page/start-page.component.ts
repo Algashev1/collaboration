@@ -17,7 +17,7 @@ export class StartPageComponent implements OnInit {
   }
 
   event(item) {
-    this.router.navigate(['event-info']);
+    //this.router.navigate(['event-info']);
   }
 
 }

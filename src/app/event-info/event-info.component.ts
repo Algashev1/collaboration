@@ -1,5 +1,6 @@
-import {Component, Output, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'event-info',
@@ -8,11 +9,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class EventInfoComponent implements OnInit {
 
-  @Output()
-  ev: any;
+  id: number;
+  private subscription: Subscription;
 
 
-  event = { urlImg: "/src/resources/img/volga.jpg", title: "VolgaHuck", type: "Information Technology", date: "28 сентября 2018", organizer: "Никита Пузанков",
+  event1 = { urlImg: "/src/resources/img/volga.jpg", title: "VolgaHuck", type: "Information Technology", date: "28 сентября 2018", organizer: "Никита Пузанков",
     place: "YellowRocket", free: 0,
     description: "С 28 по 30 сентября в Самаре пройдет соревнование для программистов, дизайнеров и других специалистов из области ИТ. " +
       "Около 5 реальных задач (треков), над которыми командам предстоит работать в течение 40 часов. Свободный выбор тем для проектов и " +
@@ -58,12 +59,38 @@ export class EventInfoComponent implements OnInit {
     ]
   };
 
+  event3 = { urlImg: "/src/resources/img/panda.jpg", title: "PandaMeetup", type: "Information Technology", date: "15 октября 2018", organizer: "Денис Кортунов",
+    place: "Холидей Инн", free: 10,
+    description: "Фестиваль 404 — отличное место, чтобы познакомиться с коллегами и узнать что-то новое. " +
+      "Можно слушать доклады, задавать докладчикам вопросы или общаться в кулуарах с интересными людьми. " +
+      "На фестивале совершенно особая приятная и дружественная атмосфера.",
+    coments: [
+      {
+        author: "Илон Маск", url: "/src/resources/img/mask.jpg",
+        coment: "\n" +
+          "Я пришел к заключению, что мы должны стремиться к увеличению объёма и масштаба человеческого сознания с целью понять, " +
+          "какие вопросы нужно задавать. Действительно, единственная вещь, которая имеет смысл — " +
+          "это стремиться к большому коллективному просветлению.",
+      },
+      {
+        author: "Тим Кук", url: "/src/resources/img/cook.jpg",
+        coment: "\n" +
+          "Я твердо верю, что многие люди, радующиеся при покупке, из-за того, что они платят не высокую цену, разочаровываются, " +
+          "когда приносят домой этот планшет и начинают его использовать. Их запросы в полной мере не удовлетворяются и это " +
+          "первоначальное чувство выгодной покупки быстро проходит."
+      }
+    ]
+  };
+
+  events = [{value: this.event1}, {value: this.event2}, {value: this.event3}];
+
   ngOnInit(): void {
 
   }
 
   constructor(private route: ActivatedRoute, private router: Router){
-
+      this.subscription = route.params.subscribe(params=>this.id=params['id']);
+      console.log(this.id);
   }
 
 }

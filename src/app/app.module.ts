@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   { path: 'developments', component: DevelopmentsComponent },
   { path: 'places', component: PlacesComponent },
   { path: 'place-info', component: PlaceInfoComponent },
-  { path: 'event-info', component: EventInfoComponent }
+  { path: 'event-info/:id', component: EventInfoComponent }
 ];
 
 

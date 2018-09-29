@@ -1,14 +1,14 @@
 <div class="event-block">
   <div class="row p-5">
     <div class="col-4">
-      <img style="height: auto;width: 100%;" src="{{event2.urlImg}}" class="img-fluid pull-right" alt="">
+      <img style="height: auto;width: 100%;" src="{{events[id].value.urlImg}}" class="img-fluid pull-right" alt="">
     </div>
     <div class="col-8 pr-5">
       <div class="custom-row ">
         <div class="col-9 p-0">
           <div class="custom-row">
-            <h2 class="color-star mr-3">{{event2.title}}</h2>
-            <label class="p-2"><em>{{event2.type}}</em></label>
+            <h2 class="color-star mr-3">{{events[id].value.title}}</h2>
+            <label class="p-2"><em>{{events[id].value.type}}</em></label>
           </div>
         </div>
         <div class="col-3 pr-0 mr-0 text-right">
@@ -16,24 +16,24 @@
         </div>
       </div>
       <div class="custom-row">
-        <label class="color-star">{{event2.date}}</label>
+        <label class="color-star">{{events[id].value.date}}</label>
       </div>
       <div class="custom-row mt-3">
         <div class="col-4 text-center">
          <h6>Организатор</h6>
-          <label class="color-star">{{event2.organizer}}</label>
+          <label class="color-star">{{events[id].value.organizer}}</label>
         </div>
         <div class="col-4 text-center">
           <h6>Место проведения</h6>
-          <label class="color-star">{{event2.place}}</label>
+          <label class="color-star">{{events[id].value.place}}</label>
         </div>
         <div class="col-4 text-center">
           <h6>Осталось мест</h6>
-          <label class="color-star">{{event2.free}}</label>
+          <label class="color-star">{{events[id].value.free}}</label>
         </div>
       </div>
       <div class="custom-row">
-        <p class="custom-p">{{event2.description}}
+        <p class="custom-p">{{events[id].value.description}}
         </p>
       </div>
     </div>
@@ -41,7 +41,7 @@
 </div>
 <div class="my-4 text-center">
   <h4 class="mt-4"> Комментарии</h4>
-  <div class="custom-row mt-4" *ngFor="let item of event2.coments">
+  <div class="custom-row mt-4" *ngFor="let item of events[id].value.coments">
     <div class="col-3 event-info-photo-comment">
       <img style="height: auto;width: 30%;" src="{{item.url}}" class="circle-img float-right" alt="">
     </div>
