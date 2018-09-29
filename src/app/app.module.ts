@@ -16,7 +16,6 @@ import { PlaceInfoComponent } from './place-info/place-info.component';
 import { EventInfoComponent } from './event-info/event-info.component';
 import {PlaceService} from './shared/place/place.service';
 import {PlaceListComponent} from './place-list/place-list.component';
-import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [

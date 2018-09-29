@@ -41,7 +41,6 @@
 }
 
 .event-block {
-  height: 450px;
   border-radius: 40px;
   background-color: rgba(87, 134, 255, 0.1);
 }
@@ -50,17 +49,6 @@
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   background-color: rgba(87, 134, 255, 0.1);
-}
-
-.event-info-block {
-  padding-top: 100px;
-  padding-left: 100px;
-  height: 400px;
-}
-
-.event-info-photo-comment {
-  //height: 50px;
-  //width: 50px;
 }
 
 .comment {
@@ -79,4 +67,8 @@
 
 .circle-img {
   border-radius: 50%;
+}
+
+.card-img-custom {
+  height: 220px;
 }
