@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -16,6 +17,10 @@ export class PlacesComponent implements OnInit {
     {title: "LOFT", type: "коворкинг", countStar: Array(4),  description: "Описание места LOFT", url: "/src/resources/img/loft.jpg"}
   ];
 
+  constructor(private router: Router) {
+
+  }
+
   ngOnInit(): void {
     this.optionsSelect = [
       { value: '1', label: 'Option 1' },
@@ -24,8 +29,8 @@ export class PlacesComponent implements OnInit {
     ];
   }
 
-  place() {
-    alert("Place");
+  place(item) {
+    this.router.navigate(['place-info']);
   }
 
 }

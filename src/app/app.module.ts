@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModalContent } from './header/auth/auth.component';
 import { RegModalContent } from './header/reg/reg.component';
 import { RouterModule, Routes } from '@angular/router';
+import {PlaceInfoComponent} from './place-info/place-info.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   },
   { path: 'start-page', component: StartPageComponent },
   { path: 'developments', component: DevelopmentsComponent },
-  { path: 'places', component: PlacesComponent }
+  { path: 'places', component: PlacesComponent },
+  { path: 'place-info', component: PlaceInfoComponent }
 ];
 
 
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
     StartPageComponent,
     PlacesComponent,
     DevelopmentsComponent,
+    PlaceInfoComponent,
     AuthModalContent,
     RegModalContent
   ],
@@ -48,6 +51,7 @@ const appRoutes: Routes = [
     StartPageComponent,
     PlacesComponent,
     DevelopmentsComponent,
+    PlaceInfoComponent,
     RouterModule
   ],
   providers: [],

@@ -59,7 +59,7 @@
 
 <div *ngFor="let item of company">
   <div class="my-5">
-    <div class="row places-info shadow bg-white rounded" (click)="place()">
+    <div class="row places-info shadow bg-white rounded" (click)="place(item)">
       <div class="col-5 p-0">
         <img src="{{item.url}}" class="img-fluid pull-right" alt="">
       </div>
