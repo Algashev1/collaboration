@@ -16,18 +16,15 @@
       <div class="collapse navbar-collapse" id="basicExampleNav">
         <ul class="navbar-nav mr-auto smooth-scroll">
           <li class="nav-item">
-            <a href="#intro" class="nav-link waves-effect waves-light">Главная</a>
+            <a class="nav-link waves-effect waves-light" routerLink="start-page">События</a>
           </li>
           <li class="nav-item">
-            <a href="#places" class="nav-link waves-effect waves-light">Места</a>
-          </li>
-          <li class="nav-item">
-            <a href="#events" class="nav-link waves-effect waves-light">События</a>
+            <a class="nav-link waves-effect waves-light" routerLink="places">Места</a>
           </li>
         </ul>
       </div>
-      <button mdbBtn type="button" color="primary" rounded="true" class="waves-light" mdbWavesEffect>Зарегистрироваться</button>
-      <button mdbBtn type="button" color="primary" rounded="true" class="waves-light" mdbWavesEffect>Авторизоваться</button>
+      <button mdbBtn type="button" color="primary" rounded="true" class="waves-light" mdbWavesEffect (click)="auth()">Зарегистрироваться</button>
+      <button mdbBtn type="button" color="primary" rounded="true" class="waves-light" mdbWavesEffect (click)="reg() ">Авторизоваться</button>
     </div>
   </nav>
 </header>
