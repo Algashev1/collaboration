@@ -14,6 +14,10 @@ import { RegModalContent } from './header/reg/reg.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PlaceInfoComponent } from './place-info/place-info.component';
 import { EventInfoComponent } from './event-info/event-info.component';
+import {PlaceService} from './shared/place/place.service';
+import {PlaceListComponent} from './place-list/place-list.component';
+import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '',
@@ -30,6 +34,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    PlaceListComponent,
     HeaderComponent,
     FooterComponent,
     StartPageComponent,
@@ -42,6 +47,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MDBBootstrapModule.forRoot(),
     NgbModule,
     RouterModule.forRoot(
@@ -58,7 +64,7 @@ const appRoutes: Routes = [
     EventInfoComponent,
     RouterModule
   ],
-  providers: [],
+  providers: [PlaceService],
   entryComponents: [AuthModalContent,RegModalContent],
   bootstrap: [AppComponent]
 })
