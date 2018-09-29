@@ -46,6 +46,12 @@
   background-color: rgba(87, 134, 255, 0.1);
 }
 
+.place-block {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: rgba(87, 134, 255, 0.1);
+}
+
 .event-info-block {
   padding-top: 100px;
   padding-left: 100px;
@@ -69,5 +75,8 @@
 .custom-row {
   display: flex;
   flex-wrap: wrap;
+}
 
+.circle-img {
+  border-radius: 50%;
 }
