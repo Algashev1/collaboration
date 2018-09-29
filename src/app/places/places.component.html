@@ -57,27 +57,30 @@
   </div>
 </div>
 
-<div class="my-5">
-  <div class="row places-info  shadow bg-white rounded">
-    <div class="col-5 p-0">
-      <img src="/src/resources/img/yr.jpg" class="img-fluid pull-right itemImg" alt="">
-    </div>
+<div *ngFor="let item of company">
+  <div class="my-5">
+    <div class="row places-info shadow bg-white rounded" (click)="place()">
+      <div class="col-5 p-0">
+        <img src="{{item.url}}" class="img-fluid pull-right" alt="">
+      </div>
 
-    <div class="col-7 p-3">
-      <div>
-        <h4>YellowRockets</h4>
-      </div>
-      <div>
-      <label>коворкинг</label>
-      </div>
-      <div>
-        <p>Много текста много текста много текста много текста много текста много текста много текста
-          много текста много текстамного текста много текстамного текста много текстамного текста много текста
-          много текста много текстамного текста много текстамного текста много текстамного текста много текста
-          много текста много текстамного текста много текстамно</p>
-      </div>
-    </div>
+      <div class="col-7 p-4">
+        <div class="row">
+          <h4 class="text-primary row-custom">{{item.title}}</h4>
 
+          <div class="mx-3 my-1">
+            <i *ngFor="let number of item.countStar" class="fa fa-star color-star" aria-hidden="true"></i>
+          </div>
+
+        </div>
+        <div>
+        <label class="text-black-50">{{item.type}}</label>
+        </div>
+        <div>
+          <p>{{item.description}}</p>
+        </div>
+      </div>
+
+    </div>
   </div>
-
 </div>
