@@ -11,12 +11,13 @@ import { DevelopmentsComponent } from './developments/developments.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModalContent } from './header/auth/auth.component';
 import { RegModalContent } from './header/reg/reg.component';
+import { ParticipateModalComponent } from './event-info/participate/participate.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PlaceInfoComponent } from './place-info/place-info.component';
 import { EventInfoComponent } from './event-info/event-info.component';
-import {PlaceService} from './shared/place/place.service';
-import {PlaceListComponent} from './place-list/place-list.component';
-import {HttpClientModule} from '@angular/common/http';
+import { PlaceService } from './shared/place/place.service';
+import { PlaceListComponent } from './place-list/place-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '',
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     PlaceInfoComponent,
     EventInfoComponent,
     AuthModalContent,
-    RegModalContent
+    RegModalContent,
+    ParticipateModalComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,7 @@ const appRoutes: Routes = [
     RouterModule
   ],
   providers: [PlaceService],
-  entryComponents: [AuthModalContent,RegModalContent],
+  entryComponents: [AuthModalContent,RegModalContent, ParticipateModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
