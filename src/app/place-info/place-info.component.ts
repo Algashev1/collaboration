@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ReserveModalComponent} from './reserve/reserve.component';
 
 
 @Component({
@@ -15,6 +17,14 @@ export class PlaceInfoComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  constructor(private modalService: NgbModal) {
+
+  }
+
+  reserve() {
+    const modalRef = this.modalService.open(ReserveModalComponent);
   }
 
 }

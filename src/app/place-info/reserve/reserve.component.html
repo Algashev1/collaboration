@@ -1,0 +1,23 @@
+<div class="modal-header pl-5">
+  <h4 class="modal-title">Забронировать</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body px-5">
+  <div class="md-form">
+    <input mdbInputDirective type="text" class="form-control">
+    <label>Имя</label>
+  </div>
+  <div class="md-form">
+    <input mdbInputDirective type="text" class="form-control">
+    <label>Почта</label>
+  </div>
+  <div class="md-form">
+    <input mdbInputDirective type="text" class="form-control">
+    <label>Номер телефона</label>
+  </div>
+</div>
+<div class="modal-footer">
+  <a mdbBtn color="primary" size="lg" class="waves-light" (click)="activeModal.close('Close click')" mdbWavesEffect>Отправить заявку</a>
+</div>
