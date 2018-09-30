@@ -1,4 +1,5 @@
 <div class="event-block">
+  <div style="height: 60px"></div>
   <div class="row p-5">
     <div class="col-4">
       <img style="height: auto;width: 100%;" src="{{events[id].value.urlImg}}" class="img-fluid pull-right" alt="">
@@ -12,7 +13,7 @@
           </div>
         </div>
         <div class="col-3 pr-0 mr-0 text-right">
-          <button class="btn btn-outline-primary waves-effect pull-right mr-0">Участвовать</button>
+          <button class="btn btn-outline-primary waves-effect pull-right mr-0" (click)="participate()">Участвовать</button>
         </div>
       </div>
       <div class="custom-row">

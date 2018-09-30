@@ -1,6 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import {AuthModalContent} from '../header/auth/auth.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ParticipateModalComponent} from './participate/participate.component';
 
 @Component({
   selector: 'event-info',
@@ -11,7 +14,6 @@ export class EventInfoComponent implements OnInit {
 
   id: number;
   private subscription: Subscription;
-
 
   event1 = { urlImg: "/src/resources/img/volga.jpg", title: "VolgaHuck", type: "Information Technology", date: "28 сентября 2018", organizer: "Никита Пузанков",
     place: "YellowRocket", free: 0,
@@ -59,11 +61,11 @@ export class EventInfoComponent implements OnInit {
     ]
   };
 
-  event3 = { urlImg: "/src/resources/img/panda.jpg", title: "PandaMeetup", type: "Information Technology", date: "15 октября 2018", organizer: "Денис Кортунов",
-    place: "Холидей Инн", free: 10,
-    description: "Фестиваль 404 — отличное место, чтобы познакомиться с коллегами и узнать что-то новое. " +
-      "Можно слушать доклады, задавать докладчикам вопросы или общаться в кулуарах с интересными людьми. " +
-      "На фестивале совершенно особая приятная и дружественная атмосфера.",
+  event3 = { urlImg: "/src/resources/img/panda.jpg", title: "PandaMeetup", type: "Information Technology", date: "15 октября 2018", organizer: "IT сообщество",
+    place: "Место проведения уточняется", free: 100,
+    description: "Основной принцип Panda-Meetup – живое общение IT-специалистов в неформальной обстановке на актуальные темы. " +
+      "Разработчики и тим-лиды делятся опытом и рабочими кейсами. Panda-Meetup – обеспечивает рост компетенции и передачу опыта. " +
+      "Митап полезен как опытным разработчикам, так и начинающим.",
     coments: [
       {
         author: "Илон Маск", url: "/src/resources/img/mask.jpg",
@@ -88,9 +90,13 @@ export class EventInfoComponent implements OnInit {
 
   }
 
-  constructor(private route: ActivatedRoute, private router: Router){
+  constructor(private route: ActivatedRoute, private router: Router, private modalService: NgbModal){
       this.subscription = route.params.subscribe(params=>this.id=params['id']);
       console.log(this.id);
+  }
+
+  participate() {
+    const modalRef = this.modalService.open(ParticipateModalComponent);
   }
 
 }
