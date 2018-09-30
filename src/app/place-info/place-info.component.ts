@@ -24,7 +24,7 @@ export class PlaceInfoComponent implements OnInit {
   }
 
   reserve() {
-    const modalRef = this.modalService.open(ReserveModalComponent);
+    const modalRef = this.modalService.open(ReserveModalComponent,  { size: 'lg'});
   }
 
 }
