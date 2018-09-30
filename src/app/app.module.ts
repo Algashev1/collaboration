@@ -18,6 +18,7 @@ import { EventInfoComponent } from './event-info/event-info.component';
 import { PlaceService } from './shared/place/place.service';
 import { PlaceListComponent } from './place-list/place-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReserveModalComponent} from './place-info/reserve/reserve.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     EventInfoComponent,
     AuthModalContent,
     RegModalContent,
+    ReserveModalComponent,
     ParticipateModalComponent
   ],
   imports: [
@@ -66,7 +68,7 @@ const appRoutes: Routes = [
     RouterModule
   ],
   providers: [PlaceService],
-  entryComponents: [AuthModalContent,RegModalContent, ParticipateModalComponent],
+  entryComponents: [AuthModalContent,RegModalContent, ParticipateModalComponent, ReserveModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
