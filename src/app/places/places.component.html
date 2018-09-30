@@ -65,7 +65,7 @@
   </div>
 </div>
 
-<div *ngFor="let item of company">
+<div *ngFor="let item of places">
   <div class="my-5">
     <div class="row places-info shadow bg-white rounded" (click)="place(item)">
       <div class="col-5 p-0">
@@ -78,9 +78,9 @@
         <div class="row">
           <h4 class="text-primary row-custom">{{item.title}}</h4>
 
-          <div class="mx-3 my-1">
-            <i *ngFor="let number of item.countStar" class="fa fa-star color-star" aria-hidden="true"></i>
-          </div>
+          <!--<div class="mx-3 my-1">-->
+            <!--<i *ngFor="let number of item.countStar" class="fa fa-star color-star" aria-hidden="true"></i>-->
+          <!--</div>-->
 
         </div>
         <div>

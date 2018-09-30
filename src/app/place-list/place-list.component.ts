@@ -1,4 +1,4 @@
-import { PlaceService } from '../shared/place/place.service';
+import {PlaceService} from '../shared/place/place.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -9,7 +9,8 @@ import {Component, OnInit} from '@angular/core';
 export class PlaceListComponent implements OnInit {
   places: Array<any>;
 
-  constructor(private placeService: PlaceService) { }
+  constructor(private placeService: PlaceService) {
+  }
 
   ngOnInit() {
     this.placeService.getAll().subscribe(data => {
